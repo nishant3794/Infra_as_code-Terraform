@@ -62,7 +62,7 @@ module "user_data" {
 module "ec2-instance" {
     source                  = "../modules/ec2"
     ami                     = data.aws_ami.ubuntu.id
-    instance_type           = "t3a.large"
+    instance_type           = "t3a.micro"
     key_name                = "ec2_key_test"
     security_groups         = [module.security_group.security-group-id]
     subnet_id               = module.private_subnet.subnet-id
